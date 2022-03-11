@@ -23,7 +23,7 @@ body {
 }
 
 .conteudo {
-  width: 1080px;
+  max-width: 1080px;
   height: 100%;
   margin: auto;
 }
@@ -37,7 +37,6 @@ header {
   display: block;
   font-family: var(--font-texto);
   font-weight: 500;
-  color: #fff;
 }
 
 #logo {
@@ -68,6 +67,11 @@ nav {
   opacity: 0.7;
 }
 
+nav:hover {
+  opacity: 0.8;
+  transition: 300ms;
+}
+
 ul {
   display: flex;
   flex-direction: row;
@@ -82,6 +86,16 @@ ul {
 }
 
 #nav-bar li {
+  width: 100%;
+  text-align: center;
+}
+
+#nav-bar li:hover {
+  transform: scale(110%);
+  transition: 0.3s;
+}
+
+#nav-bar a {
   display: inline-block;
   width: 100%;
   height: 100%;
@@ -89,17 +103,16 @@ ul {
   text-align: center;
   border-radius: 11px;
   cursor: pointer;
+  color: #fff;
 }
 
-#nav-bar li:hover {
+#nav-bar a:hover {
   color: var(--cor-secundaria);
   background-color: #fff;
   transition: 0.3s;
   animation-direction: normal;
   transition-timing-function: ease-in;
   font-size: 17px;
-  width: 115%;
-  height: 101%;
 }
 
 /* Home */
@@ -137,4 +150,67 @@ ul {
 
 #home-text span {
   color: var(--cor-principal);
+}
+
+/* Cards */
+
+#cards-bg {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  gap: 7px;
+  grid-template-areas:
+    "box-1 box-3 box-4"
+    "box-2 box-3 box-5";
+  width: 100%;
+  padding: 7px;
+  min-height: 600px;
+}
+
+.cards-box {
+  background-color: #122637;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.cards-box:hover {
+  transform: scale(103%);
+  transition: 0.3s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+}
+
+.box-1 {
+  grid-area: box-1;
+  background-image: url(assets/box-1.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+.box-2 {
+  grid-area: box-2;
+  background-image: url(assets/box-2.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+.box-3 {
+  grid-area: box-3;
+  background-image: url(assets/box-3.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+.box-4 {
+  grid-area: box-4;
+  background-image: url(assets/box-4.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.box-5 {
+  grid-area: box-5;
+  background-image: url(assets/box-5.jpeg);
+  background-position: center;
+  background-size: cover;
 }
