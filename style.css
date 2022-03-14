@@ -157,21 +157,21 @@ ul {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
-  gap: 7px;
+  gap: 12px;
   grid-template-areas:
     "box-1 box-3 box-4"
     "box-2 box-3 box-5";
   max-width: 100%;
-  padding: 7px;
+  padding: 12px;
   min-height: 600px;
 }
 
 .cards-box {
-  border-radius: 10px;
-  cursor: pointer;
+  position: relative;
+  border-radius: 7px;
   color: #fff;
   font-size: 1.5rem;
-  display: inline-block;
+  display: flex;
 }
 
 .cards-box:hover {
@@ -186,37 +186,74 @@ ul {
 .box-1 {
   grid-area: box-1;
   background-image: url(assets/box-1.jpeg);
-  background-position: center;
-  background-size: cover;
 }
 .box-2 {
   grid-area: box-2;
   background-image: url(assets/box-2.jpeg);
-  background-position: center;
-  background-size: cover;
 }
 .box-3 {
   grid-area: box-3;
   background-image: url(assets/box-3.jpeg);
-  background-position: center;
-  background-size: cover;
 }
 .box-4 {
   grid-area: box-4;
   background-image: url(assets/box-4.jpeg);
-  background-position: center;
-  background-size: cover;
 }
-
 .box-5 {
   grid-area: box-5;
   background-image: url(assets/box-5.jpeg);
+}
+.box-bg {
   background-position: center;
   background-size: cover;
 }
 
+.empty {
+  width: 50%;
+}
+
+.cards-text-bg {
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.767),
+    rgba(0, 0, 0, 0.431),
+    rgba(0, 0, 0, 0)
+  );
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .cards-text {
-  position: relative;
   padding: 20px;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+.cards-text p {
+  margin-bottom: 10px;
+}
+
+.cards-button {
+  font-family: var(--font-texto);
+  color: #fff;
+  padding: 7px 10px;
+  background-color: #ffffff00;
+  border: solid 2px;
+  border-color: #fff;
+  cursor: pointer;
+}
+
+.cards-button:hover {
+  color: var(--cor-terciaria);
+  border-color: #fff;
+  background-color: #fff;
+  border-radius: 3px;
+  transition: 300ms;
+}
+
+/* shopping */
+#shopping-bg {
+  max-height: 700px;
 }
