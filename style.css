@@ -240,8 +240,9 @@ ul {
 
 .cards-button {
   font-family: var(--font-texto);
+  font-weight: 500;
   color: #fff;
-  padding: 7px 10px;
+  padding: 8px 13px;
   background-color: #ffffff00;
   border: solid 2px;
   border-color: #fff;
@@ -256,7 +257,109 @@ ul {
   transition: 300ms;
 }
 
-/* shopping */
+/* slider */
 #shopping-bg {
   max-height: 700px;
+}
+
+.box {
+  width: 300px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slide-img {
+  height: 450px;
+  position: relative;
+}
+
+.slide-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+.type {
+  display: flex;
+  flex-direction: column;
+}
+
+.type a {
+  color: #122637;
+  margin: 5px 0px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding-right: 8px;
+}
+
+.type span {
+  color: rgba(26, 26, 26, 0.5);
+}
+
+.price {
+  color: #3333;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: #ef7cbb60;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buy-button {
+  width: 160px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cor-principal);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+}
+
+.buy-button:hover {
+  color: var(--cor-principal);
+  background-color: #fff;
+  transition: all ease 0.3s;
+}
+
+.overlay {
+  visibility: hidden;
+}
+
+.slide-img:hover .overlay {
+  visibility: visible;
+  animation: fade 0.5s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
