@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zord Store</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 
@@ -93,31 +94,130 @@
         </section>
 
         <section id='shopping-bg'>
-            <!--box-slide-->
-            <div class="box">
-                <!--img-box-->
-                <div class="slide-img">
-                    <img src="assets/IMG-1.png" alt="1">
-                </div>
-                <!--overlayer-->
-                <div class="overlay">
-                    <!--buy-button-->
-                    <a href="#" class="buy-button">Comprar</a>
+            <div class="shopping-title">
+                <h2>Confira nossa coleção de <span>inverno</span></h2>
+            </div>
+            <div class='swiper mySwiper slide-container'>
+                <div class="swiper-wrapper slide-bg">
+                    <!--box-slide-->
+                    <div class="swiper-slide box">
+                        <!--img-box-->
+                        <div class="slide-img">
+                            <img src="assets/IMG-1.png" alt="1">
+                        </div>
+                        <!--overlayer-->
+                        <div class="overlay">
+                            <!--buy-button-->
+                            <a href="#" class="buy-button">Comprar</a>
 
-                </div>
-                <!--detail-box-->
-                <div class="detail-box">
-                    <div class="type">
-                        <a href="#">Camiseta Básica</a>
-                        <span>Zord White</span>
+                        </div>
+                        <!--detail-box-->
+                        <div class="detail-box">
+                            <div class="type">
+                                <a href="#">Camiseta Básica</a>
+                                <span>Zord White</span>
+                            </div>
+                            <a href="#" class="price">R$98</a>
+                        </div>
                     </div>
-                    <a href="#" class="price">R$98</a>
+                    <div class="swiper-slide box">
+                        <!--img-box-->
+                        <div class="slide-img">
+                            <img src="assets/IMG-1.png" alt="1">
+                        </div>
+                        <!--overlayer-->
+                        <div class="overlay">
+                            <!--buy-button-->
+                            <a href="#" class="buy-button">Comprar</a>
+
+                        </div>
+                        <!--detail-box-->
+                        <div class="detail-box">
+                            <div class="type">
+                                <a href="#">Camiseta Básica</a>
+                                <span>Zord White</span>
+                            </div>
+                            <a href="#" class="price">R$98</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <!--img-box-->
+                        <div class="slide-img">
+                            <img src="assets/IMG-1.png" alt="1">
+                        </div>
+                        <!--overlayer-->
+                        <div class="overlay">
+                            <!--buy-button-->
+                            <a href="#" class="buy-button">Comprar</a>
+
+                        </div>
+                        <!--detail-box-->
+                        <div class="detail-box">
+                            <div class="type">
+                                <a href="#">Camiseta Básica</a>
+                                <span>Zord White</span>
+                            </div>
+                            <a href="#" class="price">R$98</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <!--img-box-->
+                        <div class="slide-img">
+                            <img src="assets/IMG-1.png" alt="1">
+                        </div>
+                        <!--overlayer-->
+                        <div class="overlay">
+                            <!--buy-button-->
+                            <a href="#" class="buy-button">Comprar</a>
+
+                        </div>
+                        <!--detail-box-->
+                        <div class="detail-box">
+                            <div class="type">
+                                <a href="#">Camiseta Básica</a>
+                                <span>Zord White</span>
+                            </div>
+                            <a href="#" class="price">R$98</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <!--img-box-->
+                        <div class="slide-img">
+                            <img src="assets/IMG-1.png" alt="1">
+                        </div>
+                        <!--overlayer-->
+                        <div class="overlay">
+                            <!--buy-button-->
+                            <a href="#" class="buy-button">Comprar</a>
+
+                        </div>
+                        <!--detail-box-->
+                        <div class="detail-box">
+                            <div class="type">
+                                <a href="#">Camiseta Básica</a>
+                                <span>Zord White</span>
+                            </div>
+                            <a href="#" class="price">R$98</a>
+                        </div>
+                    </div>
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
     </main>
 
     <script src="index.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 4,
+          spaceBetween: 40,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      </script>
 </body>
 
 </html>

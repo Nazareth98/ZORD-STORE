@@ -36,6 +36,7 @@ header {
   display: block;
   font-family: var(--font-texto);
   font-weight: 500;
+  z-index: 1;
 }
 
 #logo {
@@ -259,7 +260,22 @@ ul {
 
 /* slider */
 #shopping-bg {
-  max-height: 700px;
+  max-height: 800px;
+}
+.shopping-title {
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 30px;
+}
+
+.shopping-title::before {
+  content: "";
+  border-bottom: solid 1px black;
+}
+
+.slide-bg {
+  height: 100%;
+  padding: 30px 40px 60px 40px;
 }
 
 .box {
