@@ -28,28 +28,6 @@ body {
   margin: auto;
 }
 
-/* Header */
-
-header {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
-  font-family: var(--font-texto);
-  font-weight: 500;
-  z-index: 1;
-}
-
-#logo {
-  width: 100px;
-  height: 100px;
-  margin: 5px auto;
-}
-
-#logo > img {
-  width: 100%;
-}
-
 h1,
 h2,
 h3,
@@ -57,7 +35,29 @@ h4 {
   font-family: var(--font-titulo);
 }
 
+/* Header */
+
+#logo {
+  width: 100px;
+  height: 100px;
+  margin: 5px auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#logo > img {
+  width: 100%;
+}
+
 nav {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-texto);
+  font-weight: 500;
+  z-index: 100;
   width: 50vw;
   height: 50px;
   background-color: var(--cor-principal);
@@ -66,11 +66,12 @@ nav {
     0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
     0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
   opacity: 0.7;
+  transition: opacity 0.25s;
 }
 
 nav:hover {
   opacity: 1;
-  transition: 200ms;
+  transition: opacity 0.25s;
 }
 
 ul {
@@ -79,6 +80,10 @@ ul {
   justify-content: space-around;
   align-items: center;
   height: 100%;
+}
+
+.nav-scroll {
+  top: 5%;
 }
 
 #nav-bar ul {
@@ -93,7 +98,7 @@ ul {
 
 #nav-bar li:hover {
   transform: scale(110%);
-  transition: 0.3s;
+  transition: transform 0.25s;
 }
 
 #nav-bar a {
@@ -105,12 +110,13 @@ ul {
   border-radius: 11px;
   cursor: pointer;
   color: #fff;
+  transition: 0.25s;
 }
 
 #nav-bar a:hover {
   color: var(--cor-secundaria);
   background-color: #fff;
-  transition: 0.3s;
+  transition: 0.25s;
   animation-direction: normal;
   transition-timing-function: ease-in;
   font-size: 17px;
@@ -177,6 +183,7 @@ ul {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
     0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
     0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+  transition: 0.25s;
 }
 
 .cards-box:hover {
@@ -245,8 +252,13 @@ ul {
   text-align: right;
 }
 
+.cards-text {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
 .cards-text p {
   margin-bottom: 10px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 .cards-button {
@@ -276,11 +288,31 @@ ul {
   font-size: 1.4rem;
   text-align: center;
   padding: 30px;
+  position: relative;
 }
 
-.shopping-title::before {
+.shopping-title h2::after {
   content: "";
-  border-bottom: solid 1px black;
+  position: absolute;
+  top: 50%;
+  margin-left: 20px;
+  width: 200px;
+  height: 5px;
+  border-radius: 2px;
+  background-image: linear-gradient(to right, #489bde8a, #ef7cbb9a);
+  display: inline-block;
+}
+
+.shopping-title h2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 500px;
+  height: 5px;
+  border-radius: 2px;
+  background-image: linear-gradient(to right, #489bde8a, #ef7cbb9a);
+  display: inline-block;
 }
 
 .slide-bg {
@@ -333,7 +365,7 @@ ul {
 }
 
 .price {
-  color: #3333;
+  color: var(--cor-terciaria);
   font-weight: 600;
   font-size: 1.1rem;
   letter-spacing: 0.5px;
@@ -386,11 +418,12 @@ ul {
   transition: all ease 0.3s;
 }
 
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+/* Instagram */
+
+#insta-bg {
+  height: 800px;
+  width: 100%;
+}
+
+.insta-flex {
 }
