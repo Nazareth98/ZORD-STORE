@@ -212,25 +212,34 @@ ul {
   background-size: cover;
 }
 
-.empty {
-  width: 50%;
-}
-
 .cards-text-bg {
-  background-image: linear-gradient(
-    to left,
-    rgba(0, 0, 0, 0.767),
-    rgba(0, 0, 0, 0.431),
-    rgba(0, 0, 0, 0)
-  );
+  background-image: linear-gradient(to right, #489bde8a, #ef7cbb9a);
   border-radius: 7px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.cards-text-bg:hover {
+  opacity: 1;
+}
+
+.cards-text-bg:hover > * {
+  transform: translateY(0);
+}
+
+.cards-text-bg > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
 }
 
 .cards-text {
   padding: 20px;
+  width: 60%;
   font-size: 1.5rem;
   text-align: right;
 }
@@ -331,15 +340,29 @@ ul {
 
 .overlay {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 0%;
+  top: 0%;
   width: 100%;
   height: 100%;
   background-color: #ef7cbb60;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.overlay:hover > * {
+  transform: translateY(0);
+}
+
+.overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
 }
 
 .buy-button {
@@ -360,15 +383,6 @@ ul {
   color: var(--cor-principal);
   background-color: #fff;
   transition: all ease 0.3s;
-}
-
-.overlay {
-  visibility: hidden;
-}
-
-.slide-img:hover .overlay {
-  visibility: visible;
-  animation: fade 0.5s;
 }
 
 @keyframes fade {
