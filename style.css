@@ -1,6 +1,6 @@
 @charset 'UTF-8';
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hurricane&family=Open+Sans:wght@300;400;500&family=Staatliches&display=swap");
 
 * {
   margin: 0;
@@ -13,6 +13,7 @@
   --cor-terciaria: #122637;
   --font-titulo: "Staatliches", cursive;
   --font-texto: "Open Sans", sans-serif;
+  --font-special: "Hurricane", cursive;
 }
 
 html,
@@ -84,6 +85,7 @@ ul {
 
 .nav-scroll {
   top: 5%;
+  transition: ease-in-out 0.35s;
 }
 
 #nav-bar ul {
@@ -157,6 +159,8 @@ ul {
 
 #home-text span {
   color: var(--cor-principal);
+  font-family: var(--font-special);
+  font-size: 5.5rem;
 }
 
 /* Cards */
@@ -291,30 +295,6 @@ ul {
   position: relative;
 }
 
-.shopping-title h2::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  margin-left: 20px;
-  width: 200px;
-  height: 5px;
-  border-radius: 2px;
-  background-image: linear-gradient(to right, #489bde8a, #ef7cbb9a);
-  display: inline-block;
-}
-
-.shopping-title h2::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 500px;
-  height: 5px;
-  border-radius: 2px;
-  background-image: linear-gradient(to right, #489bde8a, #ef7cbb9a);
-  display: inline-block;
-}
-
 .slide-bg {
   height: 100%;
   padding: 30px 40px 60px 40px;
@@ -424,24 +404,41 @@ ul {
   height: 700px;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.insta-flex {
+.insta-text {
+  position: relative;
+}
+
+.insta-text h2 {
+  color: var(--cor-principal);
+  font-size: 2.5rem;
+}
+
+.insta-text span {
+  font-family: var(--font-special);
+  color: var(--cor-secundaria);
+  font-size: 4rem;
+}
+
+.insta-grid::after {
+  content: url(assets/instagram.svg);
+  position: absolute;
+  left: -10%;
+}
+
+.insta-grid {
   display: grid;
   height: 500px;
   grid-template-columns: 1fr 1fr 1fr;
   align-content: center;
   gap: 5px;
   position: relative;
+  margin: 0 auto;
 }
-
-.insta-flex::before {
-  content: url(assets/instagram.svg);
-  position: absolute;
-}
-
 .insta-img {
   width: 200px;
   height: 200px;
@@ -450,4 +447,9 @@ ul {
 .insta-img img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.insta-overlay {
+  background-color: rgba(0, 0, 0, 0.911);
 }
