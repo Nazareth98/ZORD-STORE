@@ -411,6 +411,7 @@ ul {
 
 .insta-text {
   position: relative;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.219);
 }
 
 .insta-text h2 {
@@ -425,9 +426,10 @@ ul {
 }
 
 .insta-grid::after {
-  content: url(assets/instagram.svg);
+  content: url(assets/instagram-2.svg);
   position: absolute;
   left: -10%;
+  top: -10%;
 }
 
 .insta-grid {
@@ -439,9 +441,13 @@ ul {
   position: relative;
   margin: 0 auto;
 }
+
 .insta-img {
   width: 200px;
   height: 200px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
 }
 
 .insta-img img {
@@ -450,6 +456,64 @@ ul {
   object-fit: cover;
 }
 
-.insta-overlay {
-  background-color: rgba(0, 0, 0, 0.911);
+/* Footer */
+
+.footer-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #12263734;
+  padding: 50px 0;
+  width: 100%;
+}
+
+.footer-column h3 {
+  font-family: var(--font-texto);
+  font-weight: 600;
+}
+
+.footer-column ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 300px;
+  margin-top: 10px;
+}
+
+.footer-column li {
+  margin-top: 3px;
+  font-size: 0.9rem;
+}
+
+.footer-column a {
+  color: rgba(18, 38, 55, 0.596);
+  transition: 0.25s;
+}
+
+.footer-column a:hover {
+  color: #fff;
+  transition: 0.25s;
+}
+
+.footer-form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.footer-column input {
+  padding: 10px;
+  border-color: #0000002f;
+}
+
+.footer-column button {
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  border-color: #0000002f;
+}
+
+.footer-column button img {
+  width: 100%;
 }
