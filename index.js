@@ -3,10 +3,11 @@ const posicao = body.getBoundingClientRect();
 const nav = document.querySelector('#nav')
 const cardsBg = document.querySelector('#cards-bg')
 const home = document.querySelector('#home-bg')
+let rect = cardsBg.getBoundingClientRect()
 
 const isOnScreen = () => {
       let rect = home.getBoundingClientRect()
-      return rect.top > 0 && rect.bottom < window.innerHeight;
+      return rect.top > -300 ;
 }
 
 function animaNavBar() { 
@@ -18,3 +19,4 @@ function animaNavBar() {
 }
 
 window.addEventListener('scroll', animaNavBar)
+
